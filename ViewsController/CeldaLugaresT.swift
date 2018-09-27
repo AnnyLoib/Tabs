@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 class CeldaLugaresT: UITableViewCell {
-    
+    @IBOutlet weak var lblSanCarlos: CeldaLugaresT!
 }

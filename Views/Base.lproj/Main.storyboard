@@ -26,11 +26,11 @@
             </objects>
             <point key="canvasLocation" x="-119" y="-493"/>
         </scene>
-        <!--Item-->
+        <!--Sitios Turisticos-->
         <scene sceneID="ipg-WS-qvX">
             <objects>
                 <navigationController id="mom-v4-JUO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="fjm-dr-QOj"/>
+                    <tabBarItem key="tabBarItem" title="Sitios Turisticos" id="fjm-dr-QOj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9sy-pt-YUE">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -46,17 +46,17 @@
         <!--View Controller-->
         <scene sceneID="TKs-sf-RE9">
             <objects>
-                <viewController id="fEj-LP-eUL" sceneMemberID="viewController">
+                <viewController id="fEj-LP-eUL" customClass="ViewController" customModule="Tabs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sv0-TK-Qe3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ARu-Wy-dh6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ARu-Wy-dh6" userLabel="tb Lugares">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="103" id="amT-j0-bmb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellSitiosT" rowHeight="103" id="amT-j0-bmb" customClass="CeldaLugaresT" customModule="Tabs" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="amT-j0-bmb" id="wtC-j1-gzZ">
@@ -67,7 +67,7 @@
                                                     <rect key="frame" x="0.0" y="-13" width="375" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <view alpha="0.55000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cer-oY-jNc">
+                                                <view alpha="0.55000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cer-oY-jNc" customClass="CeldaLugaresT" customModule="Tabs" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,6 +85,9 @@
                                                 <constraint firstItem="tjb-At-1DD" firstAttribute="centerY" secondItem="wtC-j1-gzZ" secondAttribute="centerY" id="KVY-Fe-o8k"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblSanCarlos" destination="Cer-oY-jNc" id="Vsj-vw-T73"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -93,6 +96,9 @@
                         <viewLayoutGuide key="safeArea" id="u5x-G1-V5d"/>
                     </view>
                     <navigationItem key="navigationItem" id="WJ1-Ww-jju"/>
+                    <connections>
+                        <outlet property="tbLugares" destination="ARu-Wy-dh6" id="lrH-zy-PBV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Se-HD-Lyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
